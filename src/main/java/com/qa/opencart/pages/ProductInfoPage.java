@@ -20,10 +20,11 @@ public class ProductInfoPage {
 	private ElementUtil eleutil;
 	
 	private By mainProductName = By.cssSelector("div#content h1");
-	private By productImages =By.cssSelector("ul.thumbnails img");
+	private By productImages = By.cssSelector("ul.thumbnails img");
 	private By productDescription = By.cssSelector("div#tab-description");
-	private By productMetaData =By.xpath("(//div[@id='contant']//ul[@class='list-unstyled'])[position()=1]/li");
-	private By productPriceData =By.xpath("(//div[@id='contant']//ul[@class='list-unstyled'])[position()=2]/li");
+	private By productMetaData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[position()=1]/li");
+	private By productPriceData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[position()=2]/li");
+
 
 	public  ProductInfoPage (WebDriver driver) {
 		this.driver = driver;
@@ -44,7 +45,7 @@ public class ProductInfoPage {
 		//Map<String, String>productInfoMap = new TreeMap<String, String>();//sorted order based
 		
 		
-		
+		productInfoMap.put(null,"TestAutomation");
 		productInfoMap.put("name",getMainProductName());
 		
 		//fetching MetaData:
@@ -63,7 +64,7 @@ public class ProductInfoPage {
 		List<WebElement> priceList = eleutil.getElements(productPriceData);
 		String price = priceList.get(0).getText().trim();
 		String exTaxPrice = priceList.get(1).getText().trim();
-		productInfoMap.put("price",price );
+		productInfoMap.put("price",price);
 		productInfoMap.put("exTaxPrice",exTaxPrice);
 		return productInfoMap;
 	}

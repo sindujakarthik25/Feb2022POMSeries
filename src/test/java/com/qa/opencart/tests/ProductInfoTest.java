@@ -39,15 +39,16 @@ public class ProductInfoTest extends BaseTest{
         Assert.assertEquals(productInfoPage.getProductImageCount(),imagesCount);
 	}
 	@Test
-	public void productDescription() {
+	public void productDescriptionTest() {
 		searchResultsPage = commPage.doSearch("Macbook");
 		productInfoPage = searchResultsPage.selectProductName("MacBook Air");
 		String productDesc = productInfoPage.getProductDescription();
-		System.out.println("Product desc"+productDesc);
+		System.out.println("Product desc: "+productDesc);
 		
+		softAssert.assertTrue(productDesc.contains("Macbook Air"));
 		softAssert.assertTrue(productDesc!=null);
 		softAssert.assertFalse(productDesc.isEmpty());
-		softAssert.assertTrue(productDesc.contains("Macbook Air"));
+		
 		softAssert.assertTrue(productDesc.contains(DescriptionConstants.MACBOOK_AIR_DESCRIPTION));
 		softAssert.assertAll();
 		

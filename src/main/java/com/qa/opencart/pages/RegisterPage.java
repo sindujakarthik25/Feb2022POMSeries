@@ -37,12 +37,12 @@ public class RegisterPage {
 			}
 		
 		
-		public boolean userRegister(String firstName, String lastName, 
+		public boolean userRegister(String firstname, String lastname, 
 					String email, String telephone, String password,
 					String subscribe) {
 
-				eleUtil.doSendKeys(this.firstName, firstName);
-				eleUtil.doSendKeys(this.lastName, lastName);
+				eleUtil.doSendKeys(this.firstName, firstname);
+				eleUtil.doSendKeys(this.lastName, lastname);
 				eleUtil.doSendKeys(this.email, email);
 				eleUtil.doSendKeys(this.telephone, telephone);
 				eleUtil.doSendKeys(this.password, password);
