@@ -50,7 +50,7 @@ public class ProductInfoTest extends BaseTest{
 		softAssert.assertFalse(productDesc.isEmpty());
 		
 		softAssert.assertTrue(productDesc.contains(DescriptionConstants.MACBOOK_AIR_DESCRIPTION));
-		softAssert.assertAll();
+		
 		
 	}
 	@Test
