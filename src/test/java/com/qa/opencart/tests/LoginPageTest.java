@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.pages.AccountsPage;
-import com.qa.opencart.util.Constants;
+import com.qa.opencart.utils.Constants;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;

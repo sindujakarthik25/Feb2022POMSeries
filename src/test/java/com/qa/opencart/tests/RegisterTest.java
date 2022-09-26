@@ -8,8 +8,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
-import com.qa.opencart.util.Constants;
-import com.qa.opencart.util.ExcelUtil;
+import com.qa.opencart.utils.Constants;
+import com.qa.opencart.utils.ExcelUtil;
 
 public class RegisterTest extends BaseTest{
 	

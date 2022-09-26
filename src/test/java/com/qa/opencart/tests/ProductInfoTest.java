@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.pages.CommonsPage;
 import com.qa.opencart.pages.ProductInfoPage;
-import com.qa.opencart.util.DescriptionConstants;
+import com.qa.opencart.utils.DescriptionConstants;
 
 public class ProductInfoTest extends BaseTest{
 	

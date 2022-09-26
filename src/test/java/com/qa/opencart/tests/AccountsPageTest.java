@@ -2,6 +2,7 @@ package com.qa.opencart.tests;
 
 import java.util.Collections;
 
+
 import java.util.List;
 
 import org.testng.Assert;
@@ -12,7 +13,9 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.CommonsPage;
-import com.qa.opencart.util.Constants;
+import com.qa.opencart.utils.Constants;
+import com.qa.opencart.utils.ExcelUtil;
+
 
 public class AccountsPageTest extends BaseTest {
 	
@@ -74,12 +77,13 @@ public class AccountsPageTest extends BaseTest {
 	}
 	@DataProvider
 	public Object[][] getProductData() {
-		return new Object[][] {
-			{"MacBook","MacBook Pro"},
-			{"MacBook","MacBook Air"},
-			{"Samsung","Samsung SyncMaster 941BW"}
-			
-		};
+//		return new Object[][] {
+//			{"MacBook","MacBook Pro"},
+//			{"MacBook","MacBook Air"},
+//			{"Samsung","Samsung SyncMaster 941BW"}
+//			
+		//};
+		return ExcelUtil.getTestData("product");
 	}
 	
 	@Test(dataProvider = "getProductData")

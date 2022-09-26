@@ -1,4 +1,4 @@
-package com.qa.opencart.util;
+package com.qa.opencart.utils;
 
 public enum Environment {
 	
